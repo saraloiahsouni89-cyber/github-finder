@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GitHub Profile Finder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>GitHub Profile Finder</h1>
+      <p>Search GitHub users and view their top repositories.</p>
+    </header>
+
+    <section class="search">
+      <form id="searchForm" aria-label="Search GitHub user">
+        <input id="usernameInput" type="text" placeholder="Enter GitHub username (e.g. octocat)" aria-label="GitHub username" autocomplete="off" />
+        <button id="searchBtn" type="submit">Search</button>
+      </form>
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <section id="result" class="result" hidden>
+      <aside id="profileCard" class="profile-card" aria-label="GitHub profile"></aside>
+      <section id="repos" class="repos" aria-label="Repositories">
+        <h2>Top repositories</h2>
+        <ul id="repoList" class="repo-list"></ul>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <small>Built with the GitHub REST API • <a href="https://developer.github.com/v3/" target="_blank" rel="noopener">API docs</a></small>
+    </footer>
+  </main>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
